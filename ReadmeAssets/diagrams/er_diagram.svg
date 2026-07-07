@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="t d">
+  <title id="t">ER-діаграма моделі даних</title>
+  <desc id="d">ER-діаграма для студентської платформи: таблиці users, roles, questions, answers, timetable, books, pastpapers, messages</desc>
+  <style>
+    .tbl { fill:#ffffff; stroke:#0b5ed7; stroke-width:2; rx:8; }
+    .tbl-title { font: 18px Arial; font-weight:700; fill:#0b5ed7 }
+    .col { font: 14px Arial; fill:#0b2733 }
+    .pk { font-weight:700; }
+    .fk { font-style:italic; }
+    .bg { fill:#f1f7ff }
+    .arrow { stroke:#234; stroke-width:2; fill:none; marker-end:url(#arr); }
+  </style>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#234"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="800" fill="#ffffff" />
+
+  <!-- users -->
+  <g transform="translate(40,40)">
+    <rect class="tbl" width="320" height="160"/>
+    <text class="tbl-title" x="160" y="28" text-anchor="middle">users</text>
+    <text class="col pk" x="16" y="56">id (PK)</text>
+    <text class="col" x="16" y="80">name</text>
+    <text class="col" x="16" y="104">email (UNIQUE)</text>
+    <text class="col" x="16" y="128">password_hash</text>
+    <text class="col" x="16" y="152">specialty</text>
+  </g>
+
+  <!-- roles -->
+  <g transform="translate(420,40)">
+    <rect class="tbl" width="220" height="110"/>
+    <text class="tbl-title" x="110" y="28" text-anchor="middle">roles</text>
+    <text class="col pk" x="12" y="56">id (PK)</text>
+    <text class="col" x="12" y="80">name</text>
+  </g>
+
+  <!-- user_roles -->
+  <g transform="translate(660,40)">
+    <rect class="tbl" width="220" height="110"/>
+    <text class="tbl-title" x="110" y="28" text-anchor="middle">user_roles</text>
+    <text class="col pk" x="12" y="56">id (PK)</text>
+    <text class="col fk" x="12" y="80">user_id (FK → users.id)</text>
+    <text class="col fk" x="12" y="104">role_id (FK → roles.id)</text>
+  </g>
+
+  <!-- questions -->
+  <g transform="translate(40,240)">
+    <rect class="tbl" width="360" height="140"/>
+    <text class="tbl-title" x="180" y="28" text-anchor="middle">questions</text>
+    <text class="col pk" x="12" y="56">id (PK)</text>
+    <text class="col fk" x="12" y="80">user_id (FK → users.id)</text>
+    <text class="col" x="12" y="104">title</text>
+    <text class="col" x="12" y="128">message</text>
+  </g>
+
+  <!-- answers -->
+  <g transform="translate(440,240)">
+    <rect class="tbl" width="320" height="140"/>
+    <text class="tbl-title" x="160" y="28" text-anchor="middle">answers</text>
+    <text class="col pk" x="12" y="56">id (PK)</text>
+    <text class="col fk" x="12" y="80">question_id (FK → questions.id)</text>
+    <text class="col fk" x="12" y="104">user_id (FK → users.id)</text>
+    <text class="col" x="12" y="128">message</text>
+  </g>
+
+  <!-- timetable -->
+  <g transform="translate(40,440)">
+    <rect class="tbl" width="420" height="140"/>
+    <text class="tbl-title" x="210" y="28" text-anchor="middle">timetable</text>
+    <text class="col pk" x="12" y="56">id (PK)</text>
+    <text class="col fk" x="12" y="80">group_id</text>
+    <text class="col" x="12" y="104">day_of_week</text>
+    <text class="col" x="12" y="128">subject, time, room</text>
+  </g>
+
+  <!-- books -->
+  <g transform="translate(520,440)">
+    <rect class="tbl" width="300" height="140"/>
+    <text class="tbl-title" x="150" y="28" text-anchor="middle">books</text>
+    <text class="col pk" x="12" y="56">id (PK)</text>
+    <text class="col" x="12" y="80">title</text>
+    <text class="col" x="12" y="104">author</text>
+    <text class="col" x="12" y="128">file_url</text>
+  </g>
+
+  <!-- pastpapers -->
+  <g transform="translate(860,240)">
+    <rect class="tbl" width="300" height="120"/>
+    <text class="tbl-title" x="150" y="28" text-anchor="middle">pastpapers</text>
+    <text class="col pk" x="12" y="56">id (PK)</text>
+    <text class="col" x="12" y="80">subject</text>
+    <text class="col" x="12" y="104">year, file_url</text>
+  </g>
+
+  <!-- messages -->
+  <g transform="translate(700,440)">
+    <rect class="tbl" width="340" height="140"/>
+    <text class="tbl-title" x="170" y="28" text-anchor="middle">messages</text>
+    <text class="col pk" x="12" y="56">id (PK)</text>
+    <text class="col fk" x="12" y="80">from_user_id (FK → users.id)</text>
+    <text class="col fk" x="12" y="104">to_user_id (FK → users.id)</text>
+    <text class="col" x="12" y="128">message, sent_at</text>
+  </g>
+
+  <!-- relations arrows -->
+  <path class="arrow" d="M200 160 L200 240" />
+  <path class="arrow" d="M500 160 L500 240" />
+  <path class="arrow" d="M520 160 L760 240" />
+  <path class="arrow" d="M180 380 L200 440" />
+  <path class="arrow" d="M560 380 L560 440" />
+  <path class="arrow" d="M920 320 L760 440" />
+
+  <text x="600" y="760" font-family="Arial" font-size="14">Рис.3.3.1 — ER‑діаграма реляційної моделі даних</text>
+</svg>
