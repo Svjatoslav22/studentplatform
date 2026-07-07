@@ -1,0 +1,34 @@
+.recents {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    flex-direction : column;
+    font-weight    : 700;
+
+    &__heading {
+        color        : #0b9b9b;
+        font-size    : 3.2rem;
+        margin-bottom: 2.24rem;
+    }
+
+    .recents__items {
+        display              : grid;
+        grid-template-columns: auto;
+        gap                  : 2.24rem;
+
+        .recents__items__item {
+            font-size       : 1.4rem;
+            letter-spacing  : .04rem;
+            padding         : 2.24rem;
+            width           : 19.2rem;
+            background-color: #aff5fd;
+            color           : #078585;
+            font-weight     : bold;
+
+            &:hover {
+                background-color: #0b9b9b;
+                color           : #f3feff;
+            }
+        }
+    }
+}

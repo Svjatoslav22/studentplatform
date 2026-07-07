@@ -1,0 +1,114 @@
+// Кольори, взяті з вашого макета
+$primary-teal: #08a49c;
+$dark-navy: #21174a;
+$bg-light-blue: #e4f8f9;
+$white: #ffffff;
+$accent-orange: #d95c2b;
+
+.questions {
+    min-height: 100vh;
+    background-color: $bg-light-blue;
+    // Додаємо м'який градієнт та імітацію кіл на фоні
+    background-image: radial-gradient(circle at 15% 50%, rgba(255, 255, 255, 0.6) 0%, transparent 50%),
+                      radial-gradient(circle at 85% 30%, rgba(255, 255, 255, 0.4) 0%, transparent 40%);
+    padding-bottom: 3rem;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+    &__message-screen {
+        background-color: $white;
+        border: 2px solid rgba($primary-teal, 0.15);
+        border-radius: 1.2rem;
+        margin: 2rem auto;
+        padding: 1.5rem;
+        width: 85%;
+        max-width: 1000px;
+        max-height: 50vh;
+        min-height: 45vh;
+        overflow-y: auto;
+        box-shadow: 0 10px 30px rgba(33, 23, 74, 0.05);
+
+        // Стилізація скролбару під загальну тему
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba($primary-teal, 0.4);
+            border-radius: 10px;
+            
+            &:hover {
+                background-color: $primary-teal;
+            }
+        }
+    }
+
+    &__form {
+        background-color: $white;
+        width: 85%;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        border-radius: 1.2rem;
+        box-shadow: 0 10px 30px rgba(33, 23, 74, 0.05);
+        border: 2px solid rgba($primary-teal, 0.15);
+
+        input {
+            padding: 1rem 1.5rem;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 1.1rem;
+            color: $dark-navy;
+            border: 2px solid rgba($dark-navy, 0.1);
+            border-radius: 0.8rem;
+            background-color: #fcfcfc;
+            transition: all 0.3s ease;
+
+            &::placeholder {
+                color: #a0a0a0;
+            }
+
+            &:focus {
+                outline: none;
+                border-color: $primary-teal;
+                box-shadow: 0 0 0 4px rgba($primary-teal, 0.1);
+                background-color: $white;
+            }
+        }
+
+        &__button {
+            align-self: flex-end;
+            background-color: $dark-navy; // Використовуємо колір кнопки LOGIN з макета
+            border: none;
+            outline: none;
+            padding: 0.8rem 3rem;
+            color: $white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 2rem; // Округлі форми як у кнопок на макеті
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+
+            &:hover {
+                background-color: lighten($dark-navy, 10%);
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba($dark-navy, 0.3);
+                cursor: pointer;
+            }
+
+            &:active {
+                transform: translateY(0);
+            }
+        }
+    }
+}
+
+
+
+@import './ChildComponent/MessageBody';

@@ -1,0 +1,15 @@
+.home {
+    background-image   : url("../Assets/mainBackground.png");
+    background-size    : cover;
+    background-repeat  : no-repeat;
+    background-position: center;
+    height             : 100vh;
+
+    &__page {
+        display     : flex;
+        padding-left: 2.56rem;
+    }
+}
+
+@import './ChildComponents/DashBoard/Dashboard';
+@import './ChildComponents/Recents/Recents';

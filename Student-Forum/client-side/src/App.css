@@ -1,0 +1,777 @@
+.dashboard__shortcuts .dashboard__shortcuts__button, .login__page__form__buttons .login__page__form__buttons__button, .reg__page__form__buttons .reg__page__form__buttons__button, .WelcomePage__Body__Description .WelcomePage__Body__Description__Button {
+  max-height: 3.4vw;
+  width: 15.2vw;
+  border-radius: 0.8vw;
+  color: #f3feff;
+  background-color: #0b9b9b;
+  font-size: 1.4rem;
+}
+
+.dashboard__shortcuts .dashboard__shortcuts__button:hover, .login__page__form__buttons .login__page__form__buttons__button:hover, .reg__page__form__buttons .reg__page__form__buttons__button:hover, .WelcomePage__Body__Description .WelcomePage__Body__Description__Button:hover {
+  background-color: #aff5fd;
+  color: #0b9b9b;
+  font-weight: bolder;
+}
+
+@media (max-width: 440px) and (max-height: 900px) {
+  .dashboard__shortcuts .dashboard__shortcuts__button, .login__page__form__buttons .login__page__form__buttons__button, .reg__page__form__buttons .reg__page__form__buttons__button, .WelcomePage__Body__Description .WelcomePage__Body__Description__Button {
+    max-height: 10vw;
+    width: 40vw;
+    border-radius: 2vw;
+  }
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 6vw;
+  padding-right: 3vw;
+  background-color: transparent;
+}
+
+.navbar .navbar__logo {
+  font-size: 2.4rem;
+}
+
+.navbar .navbar__buttons__logedIn {
+  color: #0b9b9b;
+  font-size: 1.4rem;
+}
+
+.navbar .navbar__buttons__menu {
+  font-size: 3.2rem;
+  color: #0b9b9b;
+}
+
+.navbar .navbar__buttons__account {
+  font-size: 4.8rem;
+  color: #0b9b9b;
+}
+
+.navbar .navbar__buttons__notLogedIn {
+  color: #0b9b9b;
+  font-size: 1.4rem;
+}
+
+.navbar .navbar__buttons .navbar__buttons__loginButton {
+  background-color: #201251;
+  color: #f3feff;
+  width: 8vw;
+  font-size: 1.2rem;
+  border-radius: 2rem;
+}
+
+.navbar .navbar__buttons .navbar__buttons__loginButton:hover {
+  background-color: #4c49a2;
+}
+
+.home {
+  background-image: url("./Components/Assets/mainBackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.home__page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 2.56rem;
+}
+
+.dashboard {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  margin-top: 6.4rem;
+  margin-left: 9.8rem;
+}
+
+.dashboard__welcome {
+  font-size: 3.2rem;
+  color: #0b9b9b;
+}
+
+.dashboard__shortcuts {
+  margin-left: 16rem;
+  display: -ms-grid;
+  display: grid;
+  gap: 3.2rem;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
+.recents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 700;
+}
+
+.recents__heading {
+  color: #0b9b9b;
+  font-size: 3.2rem;
+  margin-bottom: 2.24rem;
+}
+
+.recents .recents__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  gap: 2.24rem;
+}
+
+.recents .recents__items .recents__items__item {
+  font-size: 1.4rem;
+  letter-spacing: .04rem;
+  padding: 2.24rem;
+  width: 19.2rem;
+  background-color: #aff5fd;
+  color: #078585;
+  font-weight: bold;
+}
+
+.recents .recents__items .recents__items__item:hover {
+  background-color: #0b9b9b;
+  color: #f3feff;
+}
+
+.login {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-image: url("./Components/Assets/LoginBackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.login__page {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  gap: 1vw;
+}
+
+.login__page .login__page__avatar {
+  color: #0b9b9b;
+  font-size: 12rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.login__page__form {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  gap: 2vw;
+  padding: 1vw 0vw;
+}
+
+.login__page__form__input {
+  border: .05vw solid gray;
+  border-radius: .8vw;
+  outline: none;
+  padding: .68vw 1vw .55vw 1vw;
+  width: 100%;
+  font-size: 1.8rem;
+  color: gray;
+}
+
+.login__page__form__input:focus {
+  border: 2px solid #0b9b9b;
+}
+
+.login__page__form__buttons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  gap: 1vw;
+}
+
+.login__page__form__buttons .login__page__form__buttons__button:first-child {
+  background-color: #1ab91a;
+}
+
+.login__page__form__buttons .login__page__form__buttons__button:first-child:hover {
+  background-color: #c1ffc1;
+  color: #0b8100;
+}
+
+.login__page__form__registerQuery p {
+  font-size: 1.8rem;
+}
+
+.login__page__form a {
+  text-decoration: none;
+  color: blue;
+  font-size: 1.6rem;
+}
+
+@media (max-width: 440px) and (max-height: 900px) {
+  .login__page {
+    margin-bottom: 25vh;
+    gap: 6vw;
+  }
+  .login__page__form {
+    gap: 4vw;
+  }
+  .login__page__form__input {
+    height: 10vw;
+    border-radius: 2vw;
+    padding: 2vw 4vw 2vw 4vw;
+  }
+  .login__page__form__buttons {
+    gap: 2vw;
+  }
+}
+
+.dashboard__shortcuts .dashboard__shortcuts__button, .login__page__form__buttons .login__page__form__buttons__button, .reg__page__form__buttons .reg__page__form__buttons__button, .WelcomePage__Body__Description .WelcomePage__Body__Description__Button {
+  max-height: 3.4vw;
+  width: 15.2vw;
+  border-radius: 0.8vw;
+  color: #f3feff;
+  background-color: #0b9b9b;
+  font-size: 1.4rem;
+}
+
+.dashboard__shortcuts .dashboard__shortcuts__button:hover, .login__page__form__buttons .login__page__form__buttons__button:hover, .reg__page__form__buttons .reg__page__form__buttons__button:hover, .WelcomePage__Body__Description .WelcomePage__Body__Description__Button:hover {
+  background-color: #aff5fd;
+  color: #0b9b9b;
+  font-weight: bolder;
+}
+
+@media (max-width: 440px) and (max-height: 900px) {
+  .dashboard__shortcuts .dashboard__shortcuts__button, .login__page__form__buttons .login__page__form__buttons__button, .reg__page__form__buttons .reg__page__form__buttons__button, .WelcomePage__Body__Description .WelcomePage__Body__Description__Button {
+    max-height: 10vw;
+    width: 40vw;
+    border-radius: 2vw;
+  }
+}
+
+.reg {
+  background-image: url("./Components/Assets/RegisterBackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.reg__page {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  gap: 2vw;
+}
+
+.reg__page .reg__page__avatar {
+  color: #0b9b9b;
+  font-size: 15rem;
+}
+
+.reg__page__form {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  gap: 1vw;
+}
+
+.reg__page__form__input {
+  border: .05vw solid gray;
+  border-radius: .8vw;
+  outline: none;
+  padding: .68vw 1vw .55vw 1vw;
+  width: 100%;
+  font-size: 1.8rem;
+  color: gray;
+}
+
+.reg__page__form__input:focus {
+  border: 2px solid #0b9b9b;
+}
+
+.reg__page__form__buttons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  margin-top: 1.3vw;
+  gap: 1vw;
+}
+
+.reg__page__form__buttons .reg__page__form__buttons__button:first-child {
+  background-color: #1ab91a;
+}
+
+.reg__page__form__buttons .reg__page__form__buttons__button:first-child:hover {
+  background-color: #c1ffc1;
+  color: #0b8100;
+}
+
+@media (max-width: 440px) and (max-height: 900px) {
+  .reg {
+    background-position: right;
+  }
+  .reg__page {
+    gap: 4vw;
+  }
+  .reg__page__form {
+    gap: 4vw;
+  }
+  .reg__page__form__input {
+    height: 10vw;
+  }
+  .reg__page__form__buttons {
+    gap: 2vw;
+  }
+}
+
+.dashboard__shortcuts .dashboard__shortcuts__button, .login__page__form__buttons .login__page__form__buttons__button, .reg__page__form__buttons .reg__page__form__buttons__button, .WelcomePage__Body__Description .WelcomePage__Body__Description__Button {
+  max-height: 3.4vw;
+  width: 15.2vw;
+  border-radius: 0.8vw;
+  color: #f3feff;
+  background-color: #0b9b9b;
+  font-size: 1.4rem;
+}
+
+.dashboard__shortcuts .dashboard__shortcuts__button:hover, .login__page__form__buttons .login__page__form__buttons__button:hover, .reg__page__form__buttons .reg__page__form__buttons__button:hover, .WelcomePage__Body__Description .WelcomePage__Body__Description__Button:hover {
+  background-color: #aff5fd;
+  color: #0b9b9b;
+  font-weight: bolder;
+}
+
+@media (max-width: 440px) and (max-height: 900px) {
+  .dashboard__shortcuts .dashboard__shortcuts__button, .login__page__form__buttons .login__page__form__buttons__button, .reg__page__form__buttons .reg__page__form__buttons__button, .WelcomePage__Body__Description .WelcomePage__Body__Description__Button {
+    max-height: 10vw;
+    width: 40vw;
+    border-radius: 2vw;
+  }
+}
+
+.WelcomePage {
+  background-image: url("./Components/Assets/welcomeBackground.png");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.WelcomePage__Body {
+  margin-top: 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 6vw;
+  max-width: 31.68%;
+}
+
+.WelcomePage__Body__Title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #201251;
+}
+
+.WelcomePage__Body__Title span {
+  font-weight: lighter;
+  font-size: 5rem;
+  letter-spacing: .25rem;
+}
+
+.WelcomePage__Body__Description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 4vw;
+}
+
+.WelcomePage__Body__Description__Text {
+  padding: 1.8rem 0rem;
+  font-size: 1.6rem;
+  color: #0b9b9b;
+}
+
+.WelcomePage__Body__Description .WelcomePage__Body__Description__Button:hover {
+  color: #f3feff;
+  background-color: #201251;
+}
+
+.SocialMedia {
+  margin-top: 6.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4.8rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #201251;
+}
+
+.SocialMedia svg path:hover {
+  color: #4c49a2;
+  cursor: pointer;
+}
+
+.pastPapers {
+  background-image: url("./Components/Assets/PastPapersBackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.pastPapers__container__query {
+  padding-left: 3.5rem;
+}
+
+.pastPapers__container__papers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5rem;
+  gap: 3rem;
+  padding-left: 4rem;
+}
+
+.pastPapers__container__papers__paper {
+  gap: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  border: 2px solid rgba(160, 157, 157, 0.849);
+  background-color: rgba(226, 225, 225, 0.568);
+  border-radius: .5rem;
+  padding: 1rem .8rem;
+  height: 15rem;
+  min-width: 27.6rem;
+}
+
+.pastPapers__container__papers__paper h2 {
+  color: #333131;
+  font-size: 2.3rem;
+}
+
+.pastPapers__container__papers__paper h4 {
+  color: rgba(73, 72, 72, 0.842);
+  font-size: 1.5rem;
+}
+
+.pastPapers__container__papers__paper a {
+  margin-top: .5rem;
+  text-decoration: none;
+  color: white;
+  background-color: #201251;
+  border-radius: .5rem;
+  text-align: center;
+  padding: .6rem .3rem;
+  font-size: 1.2rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 7rem;
+}
+
+.pastPapers__container__papers__paper a:hover {
+  background-color: #30309c;
+}
+
+.dashboard__shortcuts .dashboard__shortcuts__button, .login__page__form__buttons .login__page__form__buttons__button, .reg__page__form__buttons .reg__page__form__buttons__button, .WelcomePage__Body__Description .WelcomePage__Body__Description__Button {
+  max-height: 3.4vw;
+  width: 15.2vw;
+  border-radius: 0.8vw;
+  color: #f3feff;
+  background-color: #0b9b9b;
+  font-size: 1.4rem;
+}
+
+.dashboard__shortcuts .dashboard__shortcuts__button:hover, .login__page__form__buttons .login__page__form__buttons__button:hover, .reg__page__form__buttons .reg__page__form__buttons__button:hover, .WelcomePage__Body__Description .WelcomePage__Body__Description__Button:hover {
+  background-color: #aff5fd;
+  color: #0b9b9b;
+  font-weight: bolder;
+}
+
+@media (max-width: 440px) and (max-height: 900px) {
+  .dashboard__shortcuts .dashboard__shortcuts__button, .login__page__form__buttons .login__page__form__buttons__button, .reg__page__form__buttons .reg__page__form__buttons__button, .WelcomePage__Body__Description .WelcomePage__Body__Description__Button {
+    max-height: 10vw;
+    width: 40vw;
+    border-radius: 2vw;
+  }
+}
+
+.timetable__page {
+  background-image: url("./Components/Assets/TimeTableBackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.timetable__page__options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.timetable__page__display {
+  height: 25rem;
+  margin-top: 2rem;
+  margin-left: 20rem;
+  margin-right: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.timetable__page__button {
+  background-color: #201251 !important;
+  color: #f3feff !important;
+  height: 4rem !important;
+  margin-top: 1rem !important;
+}
+
+.timetable__page__button:hover {
+  background-color: #4c49a2 !important;
+}
+
+.books {
+  background-image: url("./Components/Assets/PastPapersBackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.books__container__query {
+  padding-left: 3.5rem;
+}
+
+.books__container__books {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5rem;
+  gap: 3rem;
+  padding-left: 4rem;
+}
+
+.books__container__books__book {
+  gap: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  border: 2px solid rgba(160, 157, 157, 0.849);
+  background-color: rgba(226, 225, 225, 0.568);
+  border-radius: .5rem;
+  padding: 1rem .8rem;
+  height: 15rem;
+  min-width: 27.6rem;
+}
+
+.books__container__books__book h2 {
+  color: #333131;
+  font-size: 2.3rem;
+}
+
+.books__container__books__book h4 {
+  color: rgba(73, 72, 72, 0.842);
+  font-size: 1.5rem;
+}
+
+.books__container__books__book a {
+  margin-top: .5rem;
+  text-decoration: none;
+  color: white;
+  background-color: #201251;
+  border-radius: .5rem;
+  text-align: center;
+  padding: .6rem .3rem;
+  font-size: 1.2rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 7rem;
+}
+
+.books__container__books__book a:hover {
+  background-color: #30309c;
+}
+
+.questions {
+  height: 100vh;
+}
+
+.questions__message-screen {
+  border: 2px solid #e0e0e0;
+  background-color: #f1f1f1;
+  border-radius: .8rem;
+  margin: 0rem 3rem;
+  padding: 1rem;
+  max-height: 38rem;
+  min-height: 38rem;
+  overflow-y: scroll;
+}
+
+.questions__form {
+  margin-top: 1.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.questions__form input {
+  padding: .7rem;
+  width: 70%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 1.4rem;
+  color: #413f3f;
+}
+
+.questions__form__button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #4f4fe7;
+  border: none;
+  outline: none;
+  padding: .9rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border-radius: .5rem;
+  width: 10rem;
+  -webkit-transition: background-color .7s;
+  transition: background-color .7s;
+  text-align: center;
+}
+
+.questions__form__button:hover {
+  background-color: #1414ad;
+  cursor: pointer;
+}
+
+.messagebody {
+  background-color: #3382cc;
+  width: 50rem;
+  border-radius: .5rem;
+  min-height: 7rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  overflow-wrap: break-word;
+  -webkit-box-shadow: 0 5px 10px #63a9ebbe;
+          box-shadow: 0 5px 10px #63a9ebbe;
+}
+
+.messagebody__text {
+  color: #ddd7d7;
+  font-size: 1.4rem;
+}
+
+.messagebody__tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .8rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.messagebody__tags li {
+  margin-top: 1rem;
+  list-style: none;
+  border-radius: .5rem;
+  background-color: rgba(46, 46, 46, 0.719);
+  color: white;
+  font-size: 1.2rem;
+  padding: .5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*# sourceMappingURL=App.css.map */

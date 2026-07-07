@@ -1,0 +1,20 @@
+@import './Components/NavBar/Navbar';
+@import './Components/HomePage/HomePage';
+@import './Components/LoginPage/LoginPage';
+@import './Components/RegistrationPage/RegistrationPage';
+@import './Components/WelcomePage/WelcomePage';
+@import './Components/SocialMedia/SocialMedia';
+@import './Components/PastPapersPage/PastPapers';
+@import './Components/TimeTable/TimetablePage';
+@import './Components/Books/Books';
+@import './Components/Questions/Questions';
+@import './Components/Profile/Profile';
+@import './Components/Resources/Resources';
+@import './Components/Settings/Settings';
+@import './Components/Help/Help';
+
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}

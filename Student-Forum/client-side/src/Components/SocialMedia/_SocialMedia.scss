@@ -1,0 +1,17 @@
+.SocialMedia {
+    margin-top : 6.4rem;
+    display    : flex;
+    gap        : 4.8rem;
+    align-items: center;
+    color      : #201251;
+
+
+    svg {
+        path {
+            &:hover {
+                color : #4c49a2;
+                cursor: pointer;
+            }
+        }
+    }
+}

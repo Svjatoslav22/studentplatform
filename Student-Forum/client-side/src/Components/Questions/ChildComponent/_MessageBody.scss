@@ -1,0 +1,161 @@
+// Змінні кольорів з вашої теми
+$primary-teal: #08a49c;
+$dark-navy: #21174a;
+$light-blue-bg: #f2f9f9;
+$white: #ffffff;
+$text-dark: #333333;
+$text-gray: #888888;
+
+.messagebody {
+    background-color: $white;
+    width: 100%; // Замість жорстких 50rem, щоб картка адаптувалась під контейнер
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    overflow-wrap: break-word;
+    box-shadow: 0 4px 15px rgba(33, 23, 74, 0.06);
+    border: 1px solid rgba($primary-teal, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(33, 23, 74, 0.1);
+    }
+
+    &__question {
+        border-bottom: 1px solid rgba($dark-navy, 0.08);
+        padding-bottom: 1rem;
+    }
+
+    &__text {
+        color: $dark-navy;
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin: 0 0 0.5rem 0;
+        line-height: 1.4;
+    }
+
+    &__author {
+        color: $text-gray;
+        font-size: 0.9rem;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        // Іконка користувача перед іменем (опціонально)
+        &::before {
+            content: "👤"; 
+            font-size: 0.8rem;
+        }
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        justify-content: flex-start; // Тепер теги краще виглядають зліва
+        padding: 0;
+        margin: 1rem 0 0 0;
+
+        li {
+            list-style: none;
+            border-radius: 2rem;
+            background-color: rgba($primary-teal, 0.1);
+            color: $primary-teal;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 0.3rem 0.8rem;
+            border: 1px solid rgba($primary-teal, 0.2);
+            transition: all 0.2s;
+
+            &:hover {
+                background-color: $primary-teal;
+                color: $white;
+            }
+        } 
+    }
+
+    &__answers {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+
+        &__item {
+            background-color: $light-blue-bg;
+            padding: 1rem 1.2rem;
+            border-radius: 0.8rem;
+            // Акцентна лінія зліва, яка показує, що це відповідь
+            border-left: 4px solid $primary-teal; 
+
+            &__text {
+                color: $text-dark;
+                font-size: 1rem;
+                margin: 0 0 0.4rem 0;
+                line-height: 1.5;
+            }
+
+            &__author {
+                color: $text-gray;
+                font-size: 0.85rem;
+                font-style: italic;
+            }
+        }
+    }
+
+    &__reply-form {
+        display: flex;
+        gap: 0.8rem;
+        margin-top: 0.5rem;
+        align-items: stretch;
+        flex-wrap: wrap;
+
+        input {
+            padding: 0.8rem 1rem;
+            border: 1px solid rgba($dark-navy, 0.15);
+            border-radius: 0.6rem;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            background-color: #fcfcfc;
+            color: $text-dark;
+
+            &[placeholder*="ім'я"] {
+                flex: 0 1 200px; // Обмежуємо ширину для поля імені
+            }
+
+            &[placeholder*="відповідь"] {
+                flex: 1; // Поле повідомлення займає весь вільний простір
+                min-width: 200px;
+            }
+
+            &:focus {
+                outline: none;
+                border-color: $primary-teal;
+                box-shadow: 0 0 0 3px rgba($primary-teal, 0.15);
+                background-color: $white;
+            }
+        }
+
+        button {
+            background-color: $primary-teal;
+            color: $white;
+            border: none;
+            border-radius: 0.6rem;
+            padding: 0 1.5rem;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+
+            &:hover {
+                background-color: darken($primary-teal, 10%);
+                transform: translateY(-1px);
+                box-shadow: 0 4px 10px rgba($primary-teal, 0.3);
+            }
+        }
+    }
+}

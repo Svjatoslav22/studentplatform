@@ -1,0 +1,204 @@
+.settingsPage {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #f8fcff 0%, #eef8ff 46%, #edf4ff 100%);
+    padding-bottom: 4rem;
+
+    &__content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    &__title {
+        font-size: 2.4rem;
+        color: #201251;
+        margin-bottom: 0.5rem;
+    }
+
+    &__subtitle {
+        font-size: 1.1rem;
+        color: #5b5b73;
+        margin-bottom: 2rem;
+    }
+
+    &__section {
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(10px);
+        border-radius: 1.3rem;
+        border: 1px solid rgba(32, 18, 81, 0.08);
+        box-shadow: 0 10px 30px rgba(32, 18, 81, 0.06);
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+
+        &__header {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 1rem;
+            color: #0b9b9b;
+
+            h2 {
+                color: #201251;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    &__profile {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        &__avatar {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0b9b9b, #201251);
+            display: grid;
+            place-items: center;
+            color: #f3feff;
+            flex-shrink: 0;
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            flex: 1;
+
+            strong { color: #201251; font-size: 1rem; }
+            span { color: #6b6b86; font-size: 0.85rem; }
+        }
+
+        &__edit {
+            background: none;
+            border: 1px solid rgba(32, 18, 81, 0.15);
+            border-radius: 0.6rem;
+            padding: 0.5rem 1rem;
+            color: #201251;
+            cursor: pointer;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: all 0.2s;
+
+            &:hover {
+                background: #201251;
+                color: #f3feff;
+            }
+        }
+    }
+
+    &__setting {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.8rem 0;
+        border-bottom: 1px solid rgba(32, 18, 81, 0.06);
+
+        &:last-child { border-bottom: none; }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        strong { color: #201251; font-size: 0.95rem; }
+        span { color: #6b6b86; font-size: 0.8rem; }
+    }
+
+    &__toggle {
+        position: relative;
+        width: 44px;
+        height: 24px;
+        flex-shrink: 0;
+
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        &__slider {
+            position: absolute;
+            cursor: pointer;
+            inset: 0;
+            background: #ccc;
+            border-radius: 24px;
+            transition: 0.3s;
+
+            &::before {
+                content: '';
+                position: absolute;
+                height: 18px;
+                width: 18px;
+                left: 3px;
+                bottom: 3px;
+                background: white;
+                border-radius: 50%;
+                transition: 0.3s;
+            }
+        }
+
+        input:checked + &__slider {
+            background: #0b9b9b;
+        }
+
+        input:checked + &__slider::before {
+            transform: translateX(20px);
+        }
+    }
+
+    &__langOptions {
+        display: flex;
+        gap: 0.8rem;
+    }
+
+    &__langBtn {
+        padding: 0.6rem 1.2rem;
+        border-radius: 0.6rem;
+        border: 1px solid rgba(32, 18, 81, 0.15);
+        background: #f8fcff;
+        color: #5b5b73;
+        cursor: pointer;
+        font-size: 0.9rem;
+        transition: all 0.2s;
+
+        &.active, &:hover {
+            background: #0b9b9b;
+            color: #f3feff;
+            border-color: #0b9b9b;
+        }
+    }
+
+    &__actionBtn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0.8rem 1rem;
+        border-radius: 0.6rem;
+        border: 1px solid rgba(32, 18, 81, 0.1);
+        background: #f8fcff;
+        color: #201251;
+        cursor: pointer;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        transition: all 0.2s;
+
+        &:hover {
+            background: rgba(11, 155, 155, 0.06);
+        }
+
+        &--danger {
+            color: #d95c2b;
+            border-color: rgba(217, 92, 43, 0.2);
+
+            &:hover {
+                background: rgba(217, 92, 43, 0.08);
+            }
+        }
+    }
+}

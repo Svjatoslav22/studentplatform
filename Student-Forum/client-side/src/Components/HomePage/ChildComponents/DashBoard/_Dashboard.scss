@@ -1,0 +1,22 @@
+.dashboard {
+    display              : grid;
+    grid-template-columns: auto auto;
+    margin-top           : 6.4rem;
+    margin-left          : 9.8rem;
+
+    &__welcome {
+        font-size: 3.2rem;
+        color    : #0b9b9b;
+    }
+
+    &__shortcuts {
+        margin-left          : 16rem;
+        display              : grid;
+        gap                  : 3.2rem;
+        grid-template-columns: auto auto;
+
+        .dashboard__shortcuts__button {
+            @extend %buttonStyle;
+        }
+    }
+}

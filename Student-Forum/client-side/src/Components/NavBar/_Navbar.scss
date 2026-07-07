@@ -1,0 +1,151 @@
+@import '../globalStyles/Button';
+
+.navbar {
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    padding-left    : 6vw;
+    padding-right   : 3vw;
+    background-color: transparent;
+    position        : relative;
+
+    .navbar__homeBtn {
+        background      : transparent;
+        border          : none;
+        cursor          : pointer;
+        padding         : 6px;
+        border-radius   : 50%;
+        display         : flex;
+        align-items     : center;
+        justify-content : center;
+        transition      : background 0.2s;
+
+        &:hover {
+            background: rgba(11, 155, 155, 0.1);
+        }
+    }
+
+    .navbar__buttons {
+        display     : flex;
+        align-items : center;
+        gap         : 0.3rem;
+        position    : relative;
+
+        .navbar__iconBtn {
+            background      : transparent;
+            border          : none;
+            cursor          : pointer;
+            padding         : 6px;
+            border-radius   : 50%;
+            display         : flex;
+            align-items     : center;
+            justify-content : center;
+            transition      : background 0.2s;
+
+            &:hover {
+                background: rgba(11, 155, 155, 0.1);
+            }
+        }
+
+        .navbar__profileBtn {
+            .navbar__buttons__account {
+                font-size: 4.8rem;
+                color    : #0b9b9b;
+            }
+        }
+
+        &__logedIn {
+            color    : #0b9b9b;
+            font-size: 1.4rem;
+        }
+
+        &__menu {
+            font-size: 3.2rem;
+            color    : #0b9b9b;
+        }
+
+        &__account {
+            font-size: 4.8rem;
+            color    : #0b9b9b;
+        }
+        
+        &__notLogedIn {
+            color    : #0b9b9b;
+            font-size: 1.4rem;
+            display  : flex;
+            gap      : 0.8rem;
+            align-items: center;
+        }
+        
+        .navbar__buttons__loginButton {
+            background-color: #201251;
+            color           : #f3feff;
+            width           : 8vw;
+            font-size       : 1.2rem;
+            border-radius   : 2rem;
+            border          : none;
+            cursor          : pointer;
+            padding         : 0.5rem 1rem;
+            font-family     : inherit;
+            transition      : all 0.2s ease;
+
+            &:hover {
+                background-color: #4c49a2;
+            }
+        }
+
+        .navbar__langToggle {
+            background      : transparent;
+            border          : 2px solid #0b9b9b;
+            border-radius   : 0.5rem;
+            color           : #0b9b9b;
+            font-size       : 1.3rem;
+            font-weight     : 700;
+            padding         : 0.4rem 1rem;
+            cursor          : pointer;
+            transition      : all 0.2s ease;
+            font-family     : inherit;
+            min-width       : 55px;
+
+            &:hover {
+                background-color: #0b9b9b;
+                color           : #f3feff;
+            }
+        }
+    }
+
+    .navbar__quickMenu {
+        position      : absolute;
+        top           : 100%;
+        right         : 0;
+        background    : #ffffff;
+        border-radius : 0.8rem;
+        box-shadow    : 0 8px 25px rgba(32, 18, 81, 0.12);
+        border        : 1px solid rgba(32, 18, 81, 0.08);
+        padding       : 0.4rem;
+        min-width     : 180px;
+        z-index       : 200;
+        display       : flex;
+        flex-direction: column;
+        gap           : 0.2rem;
+
+        button {
+            width           : 100%;
+            padding         : 0.6rem 1rem;
+            border          : none;
+            background      : transparent;
+            color           : #201251;
+            font-size       : 0.95rem;
+            text-align      : left;
+            cursor          : pointer;
+            border-radius   : 0.5rem;
+            transition      : all 0.2s ease;
+            font-family     : inherit;
+
+            &:hover {
+                background-color: #aff5fd;
+                color           : #201251;
+            }
+        }
+    }
+}
