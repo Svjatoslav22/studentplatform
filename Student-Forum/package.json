@@ -10,7 +10,8 @@
     "seed": "cd server && node seed_timetable.js"
   },
   "dependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.6"
   },
   "devDependencies": {
     "cross-env": "^7.0.3"

@@ -11,6 +11,10 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(cors({
+    origin: process.env.CLIENT_URL
+}));
+
 // Simple request logger to show Authorization header for demo
 app.use((req, res, next) => {
   try {
