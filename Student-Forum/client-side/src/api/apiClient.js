@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const apiBaseURL = (process.env.REACT_APP_API_URL || 'https://studentplatform-u967.onrender.com').replace(/\/$/, '');
+
 const apiClient = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || '',
+  baseURL: apiBaseURL,
 });
 
 // Request interceptor — додаю токен і логую запити

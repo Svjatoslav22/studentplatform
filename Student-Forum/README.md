@@ -17,6 +17,9 @@ A platform to engage students of UET Lahore
 
 `client-side/.env`:
 - `REACT_APP_API_URL=http://localhost:5000`
+- For Render deployment, set `REACT_APP_API_URL=https://studentplatform-u967.onrender.com`
+
+`client-side/.env.example` shows both local and production values as a reference.
 
 ### Run
 - `npm run dev` from the project root to start both apps together.
