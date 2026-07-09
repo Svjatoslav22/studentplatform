@@ -1,5 +1,5 @@
 # Student-Forum
-A platform to engage students of UET Lahore
+Платформа для взаємодії студентів Самбірського фахового коледжу інформатики. 
 
 ## Setup
 1. Install dependencies in the root, `client-side`, and `server` folders.
@@ -7,19 +7,19 @@ A platform to engage students of UET Lahore
 3. Create `client-side/.env` from `client-side/.env.example`.
 
 ### Environment variables
-`server/.env`:
+**`server/.env` (Local Development):**
 - `DB_HOST=localhost`
 - `DB_USER=root`
 - `DB_PASSWORD=your_password`
 - `DB_NAME=student_platform`
 - `DB_PORT=3306`
 - `PORT=5000`
+- `CLIENT_URL=http://localhost:3000` (Required for CORS)
 
-`client-side/.env`:
+**`client-side/.env` (Local Development):**
 - `REACT_APP_API_URL=http://localhost:5000`
-- For Render deployment, set `REACT_APP_API_URL=https://studentplatform-u967.onrender.com`
 
-`client-side/.env.example` shows both local and production values as a reference.
+*Note: For production deployment, ensure these variables are updated in your hosting provider's dashboard (Render for Backend, Vercel for Frontend).*
 
 ### Run
 - `npm run dev` from the project root to start both apps together.
@@ -35,7 +35,7 @@ A platform to engage students of UET Lahore
 ### Backend
 - Nodejs
 - Expressjs
-- MySQL
+- MySQL (Aiven Cloud)
 - Socket-io
 
 ## Preview🔎
@@ -43,4 +43,4 @@ A platform to engage students of UET Lahore
 ![welcome](./ReadmeAssets/Welcome.png)
 
 ### Rest
-![WhatsApp-Video-2022-05-12-at-2 09 17-PM](https://user-images.githubusercontent.com/60890818/168035861-9843cbd6-266a-48a9-9645-0e51a575d110.gif)
+![Preview](https://user-images.githubusercontent.com/60890818/168035861-9843cbd6-266a-48a9-9645-0e51a575d110.gif)

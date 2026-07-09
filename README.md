@@ -7,22 +7,24 @@
 - Backend env template: [Student-Forum/server/.env.example](Student-Forum/server/.env.example)
 - Frontend env template: [Student-Forum/client-side/.env.example](Student-Forum/client-side/.env.example)
 
-## Як задеплоїти на Render
-Оскільки тут окремо frontend і backend, найпростіше робити 2 сервіси:
+## Як задеплоїти платформу (Production)
+Проект має розділену (decoupled) архітектуру. Бекенд та фронтенд розгортаються на різних сервісах:
 
-1. Backend як Web Service.
-   - Root Directory: `Student-Forum/server`
-   - Build Command: `npm install`
-   - Start Command: `npm start`
-   - Env vars: `DB_HOST`, `DB_USER`, `DB_PASSWORD`, `DB_NAME`, `DB_PORT`, `PORT`
+### 1. Backend (Render - Web Service)
+- **Root Directory:** `Student-Forum/server`
+- **Build Command:** `npm install`
+- **Start Command:** `npm start`
+- **Environment Variables:** - База даних (Aiven MySQL): `DB_HOST`, `DB_USER`, `DB_PASSWORD`, `DB_NAME`, `DB_PORT`
+  - Сервер: `PORT` (зазвичай 10000)
+  - CORS: `CLIENT_URL` (URL розгорнутого фронтенду на Vercel, без `/` в кінці)
 
-2. Frontend як Static Site.
-   - Root Directory: `Student-Forum/client-side`
-   - Build Command: `npm install && npm run build`
-   - Publish Directory: `build`
-   - Env var: `REACT_APP_API_URL` з URL backend-сервісу на Render
-
-3. Після деплою frontend має вказувати на backend через `REACT_APP_API_URL`.
+### 2. Frontend (Vercel)
+- **Root Directory:** `Student-Forum/client-side`
+- **Framework Preset:** Create React App
+- **Environment Variables:**
+  - `REACT_APP_API_URL`: URL вашого backend-сервісу на Render (напр., `https://studentplatform-u967.onrender.com`)
+  - `CI`: `false` (для ігнорування ворнінгів лінтера при збірці)
+  - `NODE_OPTIONS`: `--openssl-legacy-provider` (для сумісності Webpack з новими версіями Node.js)
 
 ## Локальний запуск
 - `npm run dev` з кореня `Student-Forum` запускає frontend і backend разом.
